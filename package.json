@@ -1,0 +1,23 @@
+{
+  "name": "@elements/config",
+  "description": "Manage application config settings.",
+  "version": "0.0.0",
+  "license": "SEE LICENSE IN LICENSE",
+  "browser": {
+    "./find": false
+  },
+  "engines": {},
+  "dependencies": {
+    "@elements/utils": "0.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "typescript": "3.9.7"
+  },
+  "scripts": {
+    "clean": "rm -rf .elements/dist",
+    "copyfiles": "mkdir -p .elements/dist && cp README.md LICENSE.txt package.json .elements/dist",
+    "build": "yarn run clean && yarn run copyfiles && tsc",
+    "build:watch": "yarn run clean && yarn run copyfiles && tsc --watch"
+  }
+}
