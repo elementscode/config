@@ -17,7 +17,7 @@ export class Config {
   }
 
   public env(): string {
-    return process.env['ENV'] || 'dev';
+    return process.env['ENV'] || process.env['NODE_ENV'] || 'dev';
   }
 
   public is(value: string): boolean {
