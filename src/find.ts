@@ -19,7 +19,7 @@ export function findOrCreateAppConfig(cwd: string = process.cwd()): Config {
   let exports = require(requirePath);
   if (exports instanceof Config) {
     return exports;
-  } else if (exports.default instanceof Config) {
+  } else if (exports.default && exports.default.constructor && exports.default.constructor.name === 'Config') {
     return exports.default;
   } else {
     return new Config();
