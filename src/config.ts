@@ -183,9 +183,9 @@ export class Config {
   /**
    * Merge object into this config.
    */
-  public assign(other: any, path?: string): this {
-    if (typeof other !== 'object') {
-      throw new Error(`Expected assign(other, ...) parameter to be an object but got "${typeof other}" instead.`);
+  public import(other: any, path?: string): this {
+    if (!other) {
+      return this;
     }
 
     // example: this.assign(require('./http')). if the export of the require has
@@ -205,10 +205,10 @@ export class Config {
       let existing = this.setIfNotDefined(path, {});
       let assigned = Object.assign(existing, other);
       this.set(path, assigned);
+    } else {
+      // merge the other object into the main data object
+      this._data = Object.assign(this._data, other);
     }
-
-    // merge the other object into the main data object
-    this._data = Object.assign(this._data, other);
 
     return this;
   }
