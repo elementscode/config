@@ -1,14 +1,14 @@
 {
   "name": "@elements/config",
   "description": "Easy application config settings for the server and the browser.",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-alpha.105",
   "license": "MIT",
   "browser": {
     "./find": false
   },
   "engines": {},
   "dependencies": {
-    "@elements/utils": "1.0.0-beta.1"
+    "@elements/utils": "1.0.0-alpha.105"
   },
   "devDependencies": {
     "@types/node": "latest",
@@ -16,7 +16,7 @@
   },
   "scripts": {
     "clean": "rm -rf .elements/dist",
-    "copyfiles": "mkdir -p .elements/dist && cp README.md LICENSE.txt package.json .elements/dist",
+    "copyfiles": "mkdir -p .elements/dist && cp README.md package.json .elements/dist",
     "build": "yarn run clean && yarn run copyfiles && tsc",
     "build:watch": "yarn run clean && yarn run copyfiles && tsc --watch"
   }
