@@ -1,14 +1,14 @@
 {
   "name": "@elements/config",
   "description": "Easy application config settings for the server and the browser.",
-  "version": "1.0.0-alpha.105",
+  "version": "1.0.0-alpha.106",
   "license": "MIT",
   "browser": {
     "./find": false
   },
   "engines": {},
   "dependencies": {
-    "@elements/utils": "1.0.0-alpha.105"
+    "@elements/utils": "1.0.0-alpha.106"
   },
   "devDependencies": {
     "@types/node": "latest",
